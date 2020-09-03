@@ -42,6 +42,7 @@ group :development do
   gem 'bulma-rails', '~> 0.9.0'
   gem 'simple_form', '~> 5.0', '>= 5.0.2'
   gem 'gravatar_image_tag', '~> 1.2'
+  gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 end
 
 group :test do

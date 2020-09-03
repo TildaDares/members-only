@@ -1,0 +1,10 @@
+<section class="section">
+<p><%= @post.secret %></p>
+  <br />
+  <% if current_user == @post.user %>
+    <button class="button"><%= link_to "Edit", edit_post_path(@post) %></button>
+    <button class="button">
+    <%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Really delete the post?"} %>
+    </button>
+  <% end %>
+</section>

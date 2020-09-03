@@ -1,1 +1,32 @@
-<h1>Hellooooo</h1>
+<section class="column section">
+  <% @posts.each do |post| %>
+    <div class="box message secret-box">
+      <%if user_signed_in? %>
+        <div class="column media block">
+          <div class="media-left">
+  			    <figure class="image is-64x64">
+  				    <%= gravatar_image_tag(post.user.email, size: 64, alt:post.user.username, :gravatar => { :default => 'https://camo.githubusercontent.com/b4112033d193b30cc1f71cef3e584abee4c3665f/687474703a2f2f7777772e67726176617461722e636f6d2f6176617461722f30633832316636373566313332643739306233663235653739646137333961373f64656661756c743d6964656e7469636f6e' }) %>
+  			    </figure>
+  		    </div>
+          <p><%= post.user.username %></p>
+        </div>
+      <% end %>
+      <div class="message-body">
+      <p><%= post.secret %></p>
+      </div>
+      <div class="block buttons">
+        <button class="button is-warning is-outlined is-inverted is-small">
+            <%= link_to "Show", post_path(post) %>
+        </button>
+        <% if current_user == post.user %>
+          <button class="button is-warning is-outlined is-inverted is-small">
+            <%= link_to "Edit", edit_post_path(post) %>
+          </button>
+          <button class="button is-warning is-outlined is-inverted is-small">
+            <%= link_to "Delete", post_path(post), method: :delete, data: {confirm: "Really delete the post?"} %>
+          </button>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</section>
