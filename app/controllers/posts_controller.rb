@@ -5,9 +5,12 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.build(post_params)
-    @post.save
-    flash.notice = "Post Created!"
-    redirect_to post_path(@post)
+    if @post.save
+      flash.notice = "Post Created!"
+      redirect_to post_path(@post)
+    else
+      render 'new'
+    end
   end
 
   def index
