@@ -39,6 +39,9 @@ group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.2'
+  gem 'bulma-rails', '~> 0.9.0'
+  gem 'simple_form', '~> 5.0', '>= 5.0.2'
+  gem 'gravatar_image_tag', '~> 1.2'
 end
 
 group :test do
