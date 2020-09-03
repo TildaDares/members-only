@@ -26,6 +26,9 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 gem 'devise', '~> 4.7', '>= 4.7.2'
+gem 'bulma-rails', '~> 0.9.0'
+gem 'simple_form', '~> 5.0', '>= 5.0.2'
+gem 'gravatar_image_tag', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -39,10 +42,6 @@ group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.2'
-  gem 'bulma-rails', '~> 0.9.0'
-  gem 'simple_form', '~> 5.0', '>= 5.0.2'
-  gem 'gravatar_image_tag', '~> 1.2'
-  gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 end
 
 group :test do
