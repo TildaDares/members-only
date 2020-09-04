@@ -15,16 +15,10 @@
       <p><%= post.secret %></p>
       </div>
       <div class="block buttons">
-        <button class="button is-warning is-outlined is-inverted is-small">
-            <%= link_to "Show", post_path(post) %>
-        </button>
+        <%= link_to "Show", post_path(post), class: "button is-warning is-outlined is-inverted is-small buttons" %>
         <% if current_user == post.user %>
-          <button class="button is-warning is-outlined is-inverted is-small">
-            <%= link_to "Edit", edit_post_path(post) %>
-          </button>
-          <button class="button is-warning is-outlined is-inverted is-small">
-            <%= link_to "Delete", post_path(post), method: :delete, data: {confirm: "Really delete the post?"} %>
-          </button>
+          <%= link_to "Edit", edit_post_path(post), class: "button is-warning is-outlined is-inverted is-small buttons" %>
+          <%= link_to "Delete", post_path(post), method: :delete, data: {confirm: "Really delete the post?"}, class: "button is-warning is-outlined is-inverted is-small" %>
         <% end %>
       </div>
     </div>

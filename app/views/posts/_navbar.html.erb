@@ -1,13 +1,11 @@
 <div class="block">
   <nav class="navbar is-success">
     <div class="navbar-left">
-      <a href="/posts" class="hero padded navbar-item">The Elites</a>
+      <a href="/posts" class="is-size-2 padded has-text-white navbar-item is-family-monospace">Whisper</a>
     </div>
     <% if user_signed_in? %>
       <div class="navbar-end">
-        <span class="navbar-item has-text-white">
-          <%= link_to "#{current_user.username}", edit_user_registration_path %>
-        </span>
+        <%= link_to "#{current_user.username}", edit_user_registration_path, class: "navbar-item has-text-white" %>
         <span class="navbar-item">
           <%= link_to "Post Secret", new_post_path, class: "button is-primary is-outlined is-inverted" %>
         </span>
