@@ -16,6 +16,9 @@
     <% else %>
       <div class="navbar-end">
         <span class="navbar-item">
+          <%= link_to "Post Secret", new_post_path, class: "button is-primary is-outlined is-inverted" %>
+        </span>
+        <span class="navbar-item">
           <%= link_to "Sign In", new_user_session_path, class: "button is-primary is-outlined is-inverted" %>
         </span>
         <span class="navbar-item">

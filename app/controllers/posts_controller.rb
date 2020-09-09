@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, only: [:new]
   def new
     @post = current_user.posts.build
   end
